@@ -16,9 +16,9 @@ function Counter() {
     <div className='card'>
       <div className='card-title'>Counter</div>
       <div className='card-body'> 
-        <button onClick={decrement}>-</button>
-        <div className='counter'>{counter}</div>
-        <button onClick={increment}>+</button>
+        <button onClick={decrement} style={{ marginRight: '10px' }}>-</button>
+        <div className='counter' style={{ margin: '0 10px' }}>{counter}</div>
+        <button onClick={increment} style={{ marginLeft: '10px' }}>+</button>
       </div> 
     </div>
   );

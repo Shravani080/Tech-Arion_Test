@@ -1,0 +1,19 @@
+ .todo-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 50px;
+  margin: 20px;
+  
+}
+.todo-list-item {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 10px;
+}
+.todo-list-item.completed {
+  background-color: green;
+  color: white;
+}
+.todo-list-item.pending {
+  background-color: red;
+  color: white;
+}

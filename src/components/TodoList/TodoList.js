@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './TodoList.css';
 
 const TodoList = () => {
     const [todosData, setTodosData] = useState([]);
@@ -9,7 +10,7 @@ const TodoList = () => {
             .then((data) => {
                 setTodosData(data?.data || []);
             });
-    },[]);
+    }, []);
 
     const formatDate = (date) => {
         let objectDate = new Date(date);
@@ -23,7 +24,7 @@ const TodoList = () => {
 
     return (
         <div className="todo-container">
-            {(todosData || []).map((rec)=> {
+            {(todosData || []).map((rec) => {
                 return <div className={"todo-list-item " + (rec.status)}>
                     <div>{rec.title}</div>
                     <div>Due By: <b>{formatDate(rec.due_on)}</b></div>

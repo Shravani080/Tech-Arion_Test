@@ -47,7 +47,7 @@ const ContactForm = () => {
         setformErrors(errors);
     }
 
-    const submitFormData = ()=> {
+    const submitFormData = () => {
         if (!formErrors.email && !formErrors.name && !formErrors.message) {
             const requestOptions = {
                 method: 'POST',
@@ -60,7 +60,7 @@ const ContactForm = () => {
         } else {
             alert('Form is invalid')
         }
-       
+
     }
 
     return (<div className="contact-form">
@@ -76,8 +76,8 @@ const ContactForm = () => {
                 onChange={handleChange}
             />
             {formErrors.email && (
-                  <span className="err">{formErrors.email}</span>
-                )}
+                <span className="err">{formErrors.email}</span>
+            )}
         </div>
         <div className="message-block">
             <label>
@@ -92,8 +92,8 @@ const ContactForm = () => {
             //   onBlur={handleChange}
             />
             {formErrors.message && (
-                  <span className="err">{formErrors.message}</span>
-                )}
+                <span className="err">{formErrors.message}</span>
+            )}
         </div>
         <div className="email-block">
             <label>
@@ -107,10 +107,10 @@ const ContactForm = () => {
                 onChange={handleChange}
             />
             {formErrors.name && (
-                  <span className="err">{formErrors.name}</span>
-                )}
+                <span className="err">{formErrors.name}</span>
+            )}
         </div>
-        <button type="butotn" onClick={submitFormData}>Submit</button>
+        <button className="button" type="butotn" onClick={submitFormData}>Submit</button>
     </div>)
 };
 

@@ -1,12 +1,17 @@
 .contact-form{
     border: 1px solid #ddd;
-    width: 700px;
+    height: 300px;
+    width: 500px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .title{
-    font-weight: 600;
+    font-weight: 100;
     margin-top:0;
   }
   .err {
@@ -16,4 +21,15 @@
   .asterisk{
     font-size: small;
     color: red;
+  }
+  .button{
+   font-size: 25px;
+   color: white;
+   background-color: rgb(34, 164, 34);
+   border: 1px solid grey;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .button:hover{
+    background-color: green;
   }
